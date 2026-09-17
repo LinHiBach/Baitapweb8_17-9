@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sản phẩm · Product Manager</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link th:href="@{/css/ajax-crud.css}" rel="stylesheet"></head>
+<body data-kind="products" th:data-api="@{/api/products}" th:data-category-api="@{/api/categories}"
+      th:data-images="@{/uploads/products/}">
+<nav class="navbar navbar-dark"><div class="container d-flex gap-3 flex-wrap py-2">
+<a class="navbar-brand fw-bold" th:href="@{/products/ajax}">Product Manager</a>
+<div class="d-flex gap-2">
+<a class="btn btn-light text-dark fw-semibold active" th:href="@{/products/ajax}">Sản phẩm</a>
+<a class="btn btn-outline-light" th:href="@{/categories}">Danh mục</a>
+</div></div></nav>
+<main class="app-shell">
+<div class="d-flex justify-content-between align-items-center gap-3 mb-4"><div><div class="eyebrow mb-2">QUẢN LÝ CỬA HÀNG</div>
+<h1 class="fw-bold mb-1">Sản phẩm</h1><p class="text-secondary mb-0">Tìm kiếm và quản lý sản phẩm ngay trên trang.</p></div>
+<button id="createButton" class="btn btn-primary text-nowrap">+ Thêm sản phẩm</button></div>
+<div id="notice" role="status" aria-live="polite" class="alert" hidden></div>
+<form id="searchForm" class="panel p-3 mb-4 row g-2 mx-0 align-items-end">
+<div class="col-md-6"><label for="keyword" class="form-label">Tìm theo tên</label><input id="keyword" class="form-control" placeholder="Nhập tên sản phẩm..."></div>
+<div class="col-md-2"><label for="size" class="form-label">Mỗi trang</label><select id="size" class="form-select"><option>5</option><option>10</option><option>20</option></select></div>
+<div class="col-md-4 d-flex gap-2"><button class="btn btn-primary" type="submit">Tìm kiếm</button><button class="btn btn-outline-secondary" id="resetSearch" type="button">Bỏ lọc</button></div>
+</form>
+<div class="panel overflow-hidden mb-3"><div class="table-responsive"><table class="table align-middle mb-0">
+<thead><tr><th>ID</th><th>Ảnh</th><th>Tên sản phẩm</th><th>Giá</th><th>Số lượng</th><th>Danh mục</th><th>Mô tả</th><th>Thao tác</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div id="emptyState" class="p-5 text-center text-secondary" hidden>Chưa có sản phẩm phù hợp. Hãy đổi từ khóa hoặc thêm mới.</div>
+<div id="loadingState" role="status" class="p-3 text-center text-secondary" hidden>Đang tải dữ liệu...</div></div>
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-3"><span id="pageInfo" class="text-secondary"></span>
+<nav aria-label="Phân trang" class="d-flex gap-2 align-items-center"><button id="previousButton" class="btn btn-outline-secondary">Trước</button><div id="pageNumbers"></div><button id="nextButton" class="btn btn-outline-secondary">Sau</button></nav></div>
+</main>
+<div class="modal fade" id="editor" tabindex="-1" aria-labelledby="editorTitle" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
+<div class="modal-header"><h2 class="modal-title fs-5" id="editorTitle">Thêm sản phẩm</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button></div>
+<form id="editorForm" enctype="multipart/form-data" novalidate><div class="modal-body">
+<div id="formNotice" class="alert alert-danger" role="alert" hidden></div>
+<div class="mb-3"><label for="name" class="form-label">Tên sản phẩm *</label>
+<input id="name" name="name" class="form-control" maxlength="200" required><div class="invalid-feedback" data-error="name"></div></div>
+<div class="row"><div class="col-sm-6 mb-3"><label for="price" class="form-label">Giá (VNĐ) *</label>
+<input id="price" name="price" type="number" min="0" step="0.01" class="form-control" required><div class="invalid-feedback" data-error="price"></div></div>
+<div class="col-sm-6 mb-3"><label for="quantity" class="form-label">Số lượng *</label>
+<input id="quantity" name="quantity" type="number" min="0" step="1" class="form-control" required><div class="invalid-feedback" data-error="quantity"></div></div></div>
+<div class="mb-3"><label for="categoryId" class="form-label">Danh mục</label>
+<select id="categoryId" name="categoryId" class="form-select"><option value="">Chưa phân loại</option></select><div class="invalid-feedback" data-error="categoryId"></div></div>
+<div class="mb-3"><label for="description" class="form-label">Mô tả</label>
+<textarea id="description" name="description" class="form-control" maxlength="1000" rows="3"></textarea><div class="invalid-feedback" data-error="description"></div></div>
+<div class="mb-3"><label for="imageFiles" class="form-label">Thêm ảnh mới</label>
+<input id="imageFiles" name="imageFiles" type="file" multiple class="form-control" accept=".jpg,.jpeg,.png,.gif,.webp"><div class="invalid-feedback" data-error="imageFiles"></div>
+<div class="form-text">Ảnh mới được thêm vào danh sách. Ảnh đầu tiên là ảnh chính.</div></div>
+<p class="small text-secondary">JPG, PNG, GIF, WEBP; tối đa 5 MB mỗi ảnh, tổng request 10 MB.</p>
+<div id="savedImages" class="d-flex flex-wrap gap-2"></div>
+</div><div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+<button id="saveButton" type="submit" class="btn btn-primary">Lưu sản phẩm</button></div></form>
+</div></div></div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/ajax-crud.js}"></script>
+</body></html>

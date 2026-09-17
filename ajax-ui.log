@@ -1,0 +1,480 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< vn.itstar:springboot-3 >-----------------------
+[INFO] Building springboot-3 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.1:run (default-cli) > test-compile @ springboot-3 >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ springboot-3 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 10 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ springboot-3 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ springboot-3 ---
+[INFO] skip non existing resourceDirectory C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ springboot-3 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.1.1:run (default-cli) < test-compile @ springboot-3 <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.1:run (default-cli) @ springboot-3 ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:24:24.575+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:24:24.577+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:24:24.729+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-17T09:24:24.729+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-17T09:24:25.194+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:24:25.243+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:24:25.689+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T09:24:25.701+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T09:24:25.702+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T09:24:25.738+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1008 ms
+2026-09-17T09:24:25.878+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:24:25.914+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T09:24:26.213+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:24:26.236+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T09:24:26.378+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T09:24:26.379+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T09:24:26.421+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:24:27.165+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:24:27.207+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:24:27.268+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T09:24:27.448+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:24:27.460+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:24:27.694+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T09:24:27.743+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T09:24:27.748+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 3.483 seconds (process running for 3.827)
+2026-09-17T09:24:54.270+07:00  INFO 26984 --- [springboot-4] [nio-8093-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T09:24:54.270+07:00  INFO 26984 --- [springboot-4] [nio-8093-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T09:24:54.271+07:00  INFO 26984 --- [springboot-4] [nio-8093-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-17T09:31:28.022+07:00  WARN 26984 --- [springboot-4] [nio-8093-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [vn.itstar.services.ConflictException: Danh mục đang có sản phẩm. Hãy chuyển sản phẩm sang danh mục khác trước khi xóa.]
+2026-09-17T09:31:28.066+07:00  WARN 26984 --- [springboot-4] [nio-8093-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> vn.itstar.controllers.api.ProductApiController.create(vn.itstar.dto.ProductDTO) with 3 errors: [Field error in object 'product' on field 'quantity': rejected value [abc]; codes [typeMismatch.product.quantity,typeMismatch.quantity,typeMismatch.java.lang.Integer,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.quantity,quantity]; arguments []; default message [quantity]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Integer' for property 'quantity'; For input string: "abc"]] [Field error in object 'product' on field 'name': rejected value []; codes [NotBlank.product.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.name,name]; arguments []; default message [name]]; default message [Tên sản phẩm không được để trống]] [Field error in object 'product' on field 'price': rejected value [-1]; codes [DecimalMin.product.price,DecimalMin.price,DecimalMin.java.math.BigDecimal,DecimalMin]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [product.price,price]; arguments []; default message [price],true,0]; default message [Giá phải >= 0]] ]
+2026-09-17T09:31:28.104+07:00  WARN 26984 --- [springboot-4] [nio-8093-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2026-09-17T09:31:28.104+07:00  WARN 26984 --- [springboot-4] [nio-8093-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded]
+2026-09-17T09:32:04.148+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2026-09-17T09:32:04.153+07:00  INFO 26984 --- [springboot-4] [       Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T09:32:04.163+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T09:32:04.166+07:00  INFO 26984 --- [springboot-4] [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:04.173+07:00  WARN 26984 --- [springboot-4] [       Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T09:32:04.173+07:00  INFO 26984 --- [springboot-4] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T09:32:04.175+07:00  INFO 26984 --- [springboot-4] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:32:04.254+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:32:04.254+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:32:04.438+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:32:04.454+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:32:04.531+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T09:32:04.531+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T09:32:04.531+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T09:32:04.556+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 300 ms
+2026-09-17T09:32:04.597+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:32:04.631+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:32:04.632+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-17T09:32:04.635+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T09:32:04.636+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-17T09:32:04.637+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:32:04.722+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:32:04.731+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:04.844+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:32:04.851+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:32:04.945+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T09:32:04.976+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T09:32:04.981+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.749 seconds (process running for 461.061)
+2026-09-17T09:32:04.983+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T09:32:08.795+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 37 class path changes (0 additions, 0 deletions, 37 modifications)
+2026-09-17T09:32:08.797+07:00  INFO 26984 --- [springboot-4] [       Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T09:32:08.802+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T09:32:08.803+07:00  INFO 26984 --- [springboot-4] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:08.805+07:00  WARN 26984 --- [springboot-4] [       Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T09:32:08.805+07:00  INFO 26984 --- [springboot-4] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-17T09:32:08.805+07:00  INFO 26984 --- [springboot-4] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:32:08.878+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:32:08.878+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:32:09.064+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:32:09.077+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:32:09.141+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T09:32:09.141+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T09:32:09.142+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T09:32:09.161+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 280 ms
+2026-09-17T09:32:09.187+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:32:09.206+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:32:09.207+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-09-17T09:32:09.208+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T09:32:09.208+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-09-17T09:32:09.210+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:32:09.276+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:32:09.284+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:09.359+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:32:09.365+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:32:09.450+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T09:32:09.464+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T09:32:09.466+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.61 seconds (process running for 465.546)
+2026-09-17T09:32:09.467+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T09:32:43.138+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 51 class path changes (3 additions, 0 deletions, 48 modifications)
+2026-09-17T09:32:43.140+07:00  INFO 26984 --- [springboot-4] [      Thread-10] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T09:32:43.145+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T09:32:43.147+07:00  INFO 26984 --- [springboot-4] [      Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:43.150+07:00  WARN 26984 --- [springboot-4] [      Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T09:32:43.150+07:00  INFO 26984 --- [springboot-4] [      Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-09-17T09:32:43.151+07:00  INFO 26984 --- [springboot-4] [      Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:32:43.222+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:32:43.222+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:32:43.394+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:32:43.408+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:32:43.491+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T09:32:43.492+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T09:32:43.492+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T09:32:43.522+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 298 ms
+2026-09-17T09:32:43.557+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:32:43.577+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:32:43.579+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-09-17T09:32:43.581+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T09:32:43.581+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-09-17T09:32:43.581+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:32:43.662+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:32:43.668+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:43.752+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:32:43.757+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:32:43.819+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T09:32:43.839+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T09:32:43.841+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.643 seconds (process running for 499.921)
+2026-09-17T09:32:43.842+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T09:32:56.384+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 51 class path changes (0 additions, 3 deletions, 48 modifications)
+2026-09-17T09:32:56.386+07:00  INFO 26984 --- [springboot-4] [      Thread-14] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T09:32:56.392+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T09:32:56.393+07:00  INFO 26984 --- [springboot-4] [      Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:56.395+07:00  WARN 26984 --- [springboot-4] [      Thread-14] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T09:32:56.395+07:00  INFO 26984 --- [springboot-4] [      Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-09-17T09:32:56.397+07:00  INFO 26984 --- [springboot-4] [      Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:32:56.467+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:32:56.468+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:32:56.657+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:32:56.676+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:32:56.737+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T09:32:56.738+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T09:32:56.738+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T09:32:56.767+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 297 ms
+2026-09-17T09:32:56.799+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:32:56.827+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:32:56.828+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-09-17T09:32:56.831+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T09:32:56.831+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-09-17T09:32:56.832+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:32:56.908+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:32:56.915+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:57.007+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:32:57.013+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:32:57.084+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T09:32:57.103+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T09:32:57.105+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.659 seconds (process running for 513.185)
+2026-09-17T09:32:57.106+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T09:52:08.145+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 51 class path changes (3 additions, 0 deletions, 48 modifications)
+2026-09-17T09:52:08.147+07:00  INFO 26984 --- [springboot-4] [      Thread-18] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T09:52:08.153+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T09:52:08.156+07:00  INFO 26984 --- [springboot-4] [      Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:52:08.157+07:00  WARN 26984 --- [springboot-4] [      Thread-18] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T09:52:08.158+07:00  INFO 26984 --- [springboot-4] [      Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-09-17T09:52:08.158+07:00  INFO 26984 --- [springboot-4] [      Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:52:08.232+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:52:08.233+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:52:08.417+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:52:08.434+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:52:08.531+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T09:52:08.534+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T09:52:08.534+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T09:52:08.560+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 320 ms
+2026-09-17T09:52:08.600+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:52:08.627+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:52:08.628+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-09-17T09:52:08.630+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T09:52:08.630+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-09-17T09:52:08.631+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:52:08.693+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:52:08.699+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:52:08.795+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:52:08.808+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:52:08.903+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T09:52:08.920+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T09:52:08.923+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.712 seconds (process running for 1665.003)
+2026-09-17T09:52:08.924+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T10:01:54.777+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-17T10:01:54.778+07:00  INFO 26984 --- [springboot-4] [      Thread-22] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T10:01:54.783+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T10:01:54.784+07:00  INFO 26984 --- [springboot-4] [      Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T10:01:54.785+07:00  WARN 26984 --- [springboot-4] [      Thread-22] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T10:01:54.785+07:00  INFO 26984 --- [springboot-4] [      Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-09-17T10:01:54.786+07:00  INFO 26984 --- [springboot-4] [      Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T10:01:54.850+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T10:01:54.850+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T10:01:54.980+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T10:01:54.991+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2026-09-17T10:01:55.051+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T10:01:55.051+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T10:01:55.052+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T10:01:55.067+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 215 ms
+2026-09-17T10:01:55.093+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T10:01:55.127+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T10:01:55.128+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-09-17T10:01:55.130+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T10:01:55.130+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-09-17T10:01:55.131+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T10:01:55.195+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T10:01:55.199+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T10:01:55.270+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T10:01:55.274+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T10:01:55.332+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T10:01:55.353+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T10:01:55.356+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.524 seconds (process running for 2251.436)
+2026-09-17T10:01:55.357+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T10:04:54.741+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 51 class path changes (0 additions, 0 deletions, 51 modifications)
+2026-09-17T10:04:54.743+07:00  INFO 26984 --- [springboot-4] [      Thread-26] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T10:04:54.748+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T10:04:54.750+07:00  INFO 26984 --- [springboot-4] [      Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T10:04:54.751+07:00  WARN 26984 --- [springboot-4] [      Thread-26] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T10:04:54.753+07:00  INFO 26984 --- [springboot-4] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-09-17T10:04:54.753+07:00  INFO 26984 --- [springboot-4] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T10:04:54.829+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T10:04:54.829+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T10:04:55.017+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T10:04:55.034+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2026-09-17T10:04:55.106+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T10:04:55.107+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T10:04:55.107+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T10:04:55.142+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 311 ms
+2026-09-17T10:04:55.172+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T10:04:55.212+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T10:04:55.213+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-09-17T10:04:55.215+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T10:04:55.216+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-09-17T10:04:55.216+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T10:04:55.298+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T10:04:55.304+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T10:04:55.407+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T10:04:55.414+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T10:04:55.510+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T10:04:55.526+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T10:04:55.528+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.723 seconds (process running for 2431.608)
+2026-09-17T10:04:55.529+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-17T10:04:56.947+07:00  INFO 26984 --- [springboot-4] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 51 class path changes (0 additions, 3 deletions, 48 modifications)
+2026-09-17T10:04:56.949+07:00  INFO 26984 --- [springboot-4] [      Thread-30] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T10:04:56.955+07:00  INFO 26984 --- [springboot-4] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T10:04:56.957+07:00  INFO 26984 --- [springboot-4] [      Thread-30] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T10:04:56.959+07:00  WARN 26984 --- [springboot-4] [      Thread-30] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-17T10:04:56.959+07:00  INFO 26984 --- [springboot-4] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-09-17T10:04:56.959+07:00  INFO 26984 --- [springboot-4] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T10:04:57.023+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Starting Springboot3Application using Java 26.0.2.1 with PID 26984 (C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\classes started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T10:04:57.024+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T10:04:57.211+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T10:04:57.227+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2026-09-17T10:04:57.313+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8093 (http)
+2026-09-17T10:04:57.314+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T10:04:57.314+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T10:04:57.336+07:00  INFO 26984 --- [springboot-4] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 310 ms
+2026-09-17T10:04:57.372+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T10:04:57.398+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T10:04:57.398+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-09-17T10:04:57.400+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn80: url=jdbc:h2:mem:ajax-ui user=SA
+2026-09-17T10:04:57.400+07:00  INFO 26984 --- [springboot-4] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-09-17T10:04:57.401+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ajax-ui]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: AJAX-UI/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T10:04:57.450+07:00  INFO 26984 --- [springboot-4] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T10:04:57.456+07:00  INFO 26984 --- [springboot-4] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T10:04:57.542+07:00  WARN 26984 --- [springboot-4] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T10:04:57.554+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T10:04:57.612+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ajax-ui'
+2026-09-17T10:04:57.622+07:00  INFO 26984 --- [springboot-4] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8093 (http) with context path '/'
+2026-09-17T10:04:57.624+07:00  INFO 26984 --- [springboot-4] [  restartedMain] vn.itstar.Springboot3Application         : Started Springboot3Application in 0.621 seconds (process running for 2433.704)
+2026-09-17T10:04:57.624+07:00  INFO 26984 --- [springboot-4] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

@@ -1,0 +1,56 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by lombok.permit.Permit
+WARNING: Please consider reporting this to the maintainers of class lombok.permit.Permit
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+09:32:09.958 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [vn.itstar.Springboot3ApplicationTests]: Springboot3ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:32:10.085 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration vn.itstar.Springboot3Application for test class vn.itstar.Springboot3ApplicationTests
+09:32:10.179 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [vn.itstar.Springboot3ApplicationTests]: Springboot3ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:32:10.182 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration vn.itstar.Springboot3Application for test class vn.itstar.Springboot3ApplicationTests
+09:32:10.271 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-17T09:32:10.548+07:00  INFO 7544 --- [springboot-4] [           main] vn.itstar.Springboot3ApplicationTests    : Starting Springboot3ApplicationTests using Java 26.0.2.1 with PID 7544 (started by LEGIO in C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4)
+2026-09-17T09:32:10.549+07:00  INFO 7544 --- [springboot-4] [           main] vn.itstar.Springboot3ApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T09:32:11.383+07:00  INFO 7544 --- [springboot-4] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T09:32:11.438+07:00  INFO 7544 --- [springboot-4] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2026-09-17T09:32:11.853+07:00  INFO 7544 --- [springboot-4] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T09:32:11.923+07:00  INFO 7544 --- [springboot-4] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T09:32:12.417+07:00  INFO 7544 --- [springboot-4] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T09:32:12.458+07:00  INFO 7544 --- [springboot-4] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T09:32:12.731+07:00  INFO 7544 --- [springboot-4] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:product-images user=SA
+2026-09-17T09:32:12.733+07:00  INFO 7544 --- [springboot-4] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T09:32:12.802+07:00  INFO 7544 --- [springboot-4] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:product-images]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PRODUCT-IMAGES/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T09:32:13.818+07:00  INFO 7544 --- [springboot-4] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T09:32:13.910+07:00  INFO 7544 --- [springboot-4] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T09:32:14.004+07:00  INFO 7544 --- [springboot-4] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T09:32:14.331+07:00  WARN 7544 --- [springboot-4] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T09:32:14.347+07:00  INFO 7544 --- [springboot-4] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page template: index
+2026-09-17T09:32:14.770+07:00  INFO 7544 --- [springboot-4] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-09-17T09:32:14.771+07:00  INFO 7544 --- [springboot-4] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-09-17T09:32:14.772+07:00  INFO 7544 --- [springboot-4] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-09-17T09:32:14.793+07:00  INFO 7544 --- [springboot-4] [           main] vn.itstar.Springboot3ApplicationTests    : Started Springboot3ApplicationTests in 4.535 seconds (process running for 5.775)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\LEGIO\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release

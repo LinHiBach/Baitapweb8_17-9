@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout}">
+
+<head>
+    <title th:text="${formTitle}">Product</title>
+</head>
+
+<body>
+    <section layout:fragment="content">
+        <!-- BREADCRUMBS -->
+        <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb text-muted" style="font-size: 0.85rem;">
+                <li class="breadcrumb-item"><a th:href="@{/products}" class="text-decoration-none text-muted">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a th:href="@{/products}" class="text-decoration-none text-muted">Sản phẩm</a></li>
+                <li class="breadcrumb-item active text-primary fw-semibold" aria-current="page" th:text="${formTitle}">Thao tác</li>
+            </ol>
+        </nav>
+
+        <!-- PAGE HEADER -->
+        <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom">
+            <div class="d-flex align-items-center gap-3">
+                <a th:href="@{/products}" class="btn btn-soft-secondary p-2 rounded-3 d-inline-flex align-items-center justify-content-center" title="Quay lại danh sách">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </a>
+                <div>
+                    <h2 class="h3 mb-0 fw-bold" th:text="${formTitle}">Product</h2>
+                    <p class="text-muted small mb-0">Điền đầy đủ thông tin bên dưới để lưu sản phẩm vào hệ thống</p>
+                </div>
+            </div>
+            <div th:if="${product.id != null}">
+                <span class="badge bg-light text-secondary border font-monospace px-3 py-2">
+                    ID: #<span th:text="${product.id}"></span>
+                </span>
+            </div>
+        </div>
+
+        <!-- SUCCESS ALERT -->
+        <div th:if="${success}" class="alert alert-success shadow-sm mb-4" role="alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span th:text="${success}"></span>
+        </div>
+
+        <div class="row g-4">
+            <!-- MAIN FORM COLUMN -->
+            <div class="col-lg-7">
+                <form method="post" enctype="multipart/form-data" th:object="${product}" th:action="${product.id == null}
+                      ? @{/products/create}
+                      : @{/products/edit/{id}(id=${product.id})}">
+                    <div class="mb-3">
+                        <label for="categoryId" class="form-label">Danh mục</label>
+                        <select id="categoryId" class="form-select" th:field="*{categoryId}">
+                            <option value="">Chưa phân loại</option>
+                            <option th:each="category : ${categoryChoices}" th:value="${category.id}"
+                                    th:text="${category.categoryName}"></option>
+                        </select>
+                    </div>
+
+
+                    <div class="app-card p-4 mb-4">
+                        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-2 bg-primary bg-opacity-10 text-primary p-2">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </span>
+                            <h5 class="mb-0 fw-bold">Thông tin sản phẩm</h5>
+                        </div>
+
+                        <!-- PRODUCT NAME -->
+                        <div class="mb-3">
+                            <label class="form-label" for="productNameInput">
+                                Tên sản phẩm <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" id="productNameInput" class="form-control" th:field="*{name}"
+                                   th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"
+                                   placeholder="Ví dụ: Laptop Dell XPS 15...">
+                            <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+                                Lỗi tên sản phẩm
+                            </div>
+                        </div>
+
+                        <!-- PRICE & QUANTITY ROW -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label" for="productPriceInput">
+                                    Giá bán (VNĐ) <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light text-muted border-end-0" style="border-radius: var(--radius-md) 0 0 var(--radius-md); border-color: var(--border-color);">₫</span>
+                                    <input type="number" step="0.01" id="productPriceInput" class="form-control border-start-0 ps-1" th:field="*{price}"
+                                           th:classappend="${#fields.hasErrors('price')} ? 'is-invalid'"
+                                           placeholder="0.00" style="border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                                </div>
+                                <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('price')}" th:errors="*{price}">
+                                    Lỗi giá
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="productQuantityInput">
+                                    Số lượng <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light text-muted border-end-0" style="border-radius: var(--radius-md) 0 0 var(--radius-md); border-color: var(--border-color);">#</span>
+                                    <input type="number" id="productQuantityInput" class="form-control border-start-0 ps-1" th:field="*{quantity}"
+                                           th:classappend="${#fields.hasErrors('quantity')} ? 'is-invalid'"
+                                           placeholder="0" style="border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                                </div>
+                                <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}">
+                                    Lỗi số lượng
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DESCRIPTION -->
+                        <div class="mb-3">
+                            <label class="form-label" for="productDescInput">
+                                Mô tả
+                            </label>
+                            <textarea id="productDescInput" class="form-control" rows="4" th:field="*{description}"
+                                      th:classappend="${#fields.hasErrors('description')} ? 'is-invalid'"
+                                      placeholder="Mô tả chi tiết đặc điểm, tính năng sản phẩm..."></textarea>
+                            <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">
+                                Lỗi mô tả
+                            </div>
+                        </div>
+
+                        <!-- IMAGE UPLOAD FIELD INSIDE MAIN FORM -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <label for="imageFiles" class="form-label mb-0 fw-bold">
+                                    Thêm hình ảnh mới
+                                </label>
+                                <span class="badge bg-light text-muted border">Tối đa 5 MB/ảnh</span>
+                            </div>
+
+                            <div class="file-upload-wrapper">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary mb-2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                                <div class="mb-2 fw-semibold text-dark">Kéo thả ảnh hoặc bấm chọn file</div>
+                                <input type="file" id="imageFiles" name="imageFiles" multiple class="form-control"
+                                       accept=".jpg,.jpeg,.png,.gif,.webp">
+                                <div class="invalid-feedback d-block mt-2" th:if="${#fields.hasErrors('imageFiles')}" th:errors="*{imageFiles}">
+                                    Lỗi tải file
+                                </div>
+                                <div class="form-text mt-2 text-muted" style="font-size: 0.8rem;">
+                                    Có thể chọn nhiều ảnh JPG, JPEG, PNG, GIF hoặc WEBP. Mỗi ảnh tối đa 5 MB, tổng request 10 MB.
+                                    Ảnh mới được thêm vào danh sách; ảnh đầu tiên là ảnh chính. Nếu form có lỗi, hãy chọn lại file.
+                                </div>
+                            </div>
+                            
+                            <!-- Dynamic preview container for newly chosen files -->
+                            <div id="newFilesPreviewContainer" class="d-flex gap-2 flex-wrap mt-3" style="display: none;"></div>
+                        </div>
+
+                        <!-- ACTION BUTTONS -->
+                        <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                            <button type="submit" class="btn btn-gradient-primary px-4 py-2">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>
+                                <span>Lưu</span>
+                            </button>
+                            <a th:href="@{/products}" class="btn btn-soft-secondary px-4 py-2">
+                                Quay lại
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN: EXISTING IMAGES GALLERY -->
+            <div class="col-lg-5">
+                <div class="app-card p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-2 bg-success bg-opacity-10 text-success p-2">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                            </span>
+                            <h5 class="mb-0 fw-bold">Hình ảnh hiện tại</h5>
+                        </div>
+                        <span class="badge bg-light text-muted border" th:if="${!#lists.isEmpty(product.images)}"
+                              th:text="${#lists.size(product.images)} + ' ảnh'">
+                            0 ảnh
+                        </span>
+                    </div>
+
+                    <!-- IF NO IMAGES YET -->
+                    <div class="text-center py-5 text-muted" th:if="${#lists.isEmpty(product.images)}">
+                        <div class="mb-3 d-inline-flex p-3 rounded-circle bg-light text-muted">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <div class="fw-semibold">Chưa có hình ảnh nào</div>
+                        <p class="small text-muted mb-0">Chọn ảnh ở khung bên trái và bấm Lưu để tải lên</p>
+                    </div>
+
+                    <!-- EXISTING IMAGES LIST -->
+                    <div class="mt-2" th:if="${!#lists.isEmpty(product.images)}">
+                        <div class="row g-3">
+                            <div class="col-6 col-sm-6" th:each="image : ${product.images}">
+                                <div class="card img-gallery-card h-100">
+                                    <div class="position-relative text-center bg-light border-bottom overflow-hidden d-flex align-items-center justify-content-center" style="height: 140px;">
+                                        <img th:src="@{/uploads/products/{filename}(filename=${image.imageUrl})}"
+                                             th:alt="${product.name}" class="img-gallery-preview" loading="lazy">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-2 shadow-sm" th:if="${image.primary}" style="font-size: 0.725rem;">
+                                            Ảnh chính
+                                        </span>
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <form method="post" th:action="@{/products/image/delete/{id}(id=${image.id})}"
+                                              onsubmit="return confirm('Xóa ảnh này? Các thay đổi sản phẩm chưa lưu sẽ mất.');">
+                                            <button type="submit" class="btn btn-soft-danger btn-sm w-100 py-1 d-inline-flex align-items-center justify-content-center gap-1" style="font-size: 0.8rem;">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                </svg>
+                                                Xóa ảnh
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-light border small text-muted mt-3 mb-0">
+                            <span class="fw-semibold text-dark">Lưu ý:</span> Ảnh chính hiển thị mặc định ở trang danh sách. Khi xóa ảnh chính, ảnh kế tiếp sẽ tự động được chọn làm ảnh chính.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Client-side instant thumbnail preview for selected files
+            document.addEventListener('DOMContentLoaded', function() {
+                var fileInput = document.getElementById('imageFiles');
+                var previewBox = document.getElementById('newFilesPreviewContainer');
+                if (fileInput && previewBox) {
+                    fileInput.addEventListener('change', function(e) {
+                        previewBox.innerHTML = '';
+                        var files = e.target.files;
+                        if (files && files.length > 0) {
+                            previewBox.style.display = 'flex';
+                            for (var i = 0; i < files.length; i++) {
+                                (function(file, index) {
+                                    if (file.type.startsWith('image/')) {
+                                        var reader = new FileReader();
+                                        reader.onload = function(evt) {
+                                            var badge = document.createElement('div');
+                                            badge.className = 'position-relative border rounded p-1 bg-white shadow-sm';
+                                            badge.style.width = '70px';
+                                            badge.style.height = '70px';
+                                            badge.innerHTML = '<img src="' + evt.target.result + '" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;">' +
+                                                (index === 0 ? '<span class="badge bg-primary position-absolute top-0 start-0 m-1" style="font-size: 0.6rem;">Mới</span>' : '');
+                                            previewBox.appendChild(badge);
+                                        };
+                                        reader.readAsDataURL(file);
+                                    }
+                                })(files[i], i);
+                            }
+                        } else {
+                            previewBox.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        </script>
+    </section>
+</body>
+
+</html>

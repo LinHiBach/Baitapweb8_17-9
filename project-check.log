@@ -1,0 +1,22 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< vn.itstar:springboot-3 >-----------------------
+[INFO] Building springboot-3 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ springboot-3 ---
+[INFO] Deleting C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.104 s
+[INFO] Finished at: 2026-09-15T10:08:26+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean (default-clean) on project springboot-3: Failed to clean project: Failed to delete C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\springboot-3-0.0.1-SNAPSHOT.jar: C:\Users\LEGIO\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\springboot-4\target\springboot-3-0.0.1-SNAPSHOT.jar: The process cannot access the file because it is being used by another process -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -1,0 +1,14 @@
+body { background: #f4f6fb; color: #172033; }
+.app-shell { max-width: 1260px; margin: auto; padding: 32px 20px; }
+.navbar { background: #172033; }
+.eyebrow { color: #6366f1; letter-spacing: .1em; font-size: .75rem; font-weight: 700; }
+.panel { background: white; border: 1px solid #e3e8f0; border-radius: 16px; box-shadow: 0 5px 18px #17203306; }
+.table thead th { background: #eef2ff; color: #48516b; white-space: nowrap; }
+.table td, .table th { padding: 16px; }
+.thumbnail { width: 74px; height: 64px; object-fit: contain; border-radius: 8px; background: #f8fafc; }
+.description { max-width: 230px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.image-card { width: 130px; border: 1px solid #e3e8f0; border-radius: 12px; padding: 8px; }
+.image-card img { width: 112px; height: 90px; object-fit: contain; }
+.btn-primary { background: #4f46e5; border-color: #4f46e5; }
+#pageNumbers { display: flex; gap: 4px; flex-wrap: wrap; }
+@media(max-width: 600px) { .app-shell { padding: 20px 12px; } h1 { font-size: 1.7rem; } }
